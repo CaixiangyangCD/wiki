@@ -1,0 +1,114 @@
+site_name: 巧巧和菜菜
+repo_url: https://github.com/CaixiangyangCD/wiki.git
+edit_uri: blob/main/docs/
+repo_name: wiki
+site_author: Caixiangyang
+site_description: 个人wiki博客
+nav:
+  - 首页: index.md
+  - 关于: about.md
+theme:
+  name: material
+  language: zh
+  # 自定义文件夹
+  custom_dir: overrides
+  # 主题切换
+  palette:
+    # 明亮主题
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # 暗黑主题
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  
+  # logo
+  logo: assets/images/logo.png
+  # 网站图标
+  favicon: assets/images/logo.png
+
+  # 导航
+  features:
+    # 启用即时导航, 无需刷新页面
+    - navigation.instant
+    # 进度指示器, 页面在 400 毫秒后仍未完成加载时，进度指示器才会显示
+    - navigation.instant.progress
+    # 锚点跟踪, 地址栏中的url会添加锚点
+    - navigation.tracking
+    # 导航选项卡, 页面内容较多时可以使用
+    # - navigation.tabs
+    # 导航选项卡(固定), 始终可见
+    # - navigation.tabs.sticky
+
+    # 菜单将以组的形式展示, 不再是展开或折叠
+    # - navigation.sections
+    # 默认打开所有折叠的菜单
+    # - navigation.expand
+    # 文章面包屑, 显示在内容区域标题上方
+    - navigation.path
+    # 回到顶部
+    - navigation.top
+    # 目录侧边栏自动滚动, 以便锚点始终可见
+    - toc.follow
+
+    # 搜索建议
+    - search.suggest
+    # 搜索高亮
+    - search.highlight
+    # 搜索分享, 会出现一个分享图标
+    - search.share
+
+    # 允许用户编辑、查看内容
+    - content.action.edit
+    - content.action.view
+    # 代码块
+    - content.code.annotate
+    - content.code.copy
+
+
+  # 插件
+  plugins:
+    - search
+    # 博客插件
+    - blog
+    # 元数据插件, 为文章添加统一的元数据
+    - meta
+    # 标签
+    - tags
+
+
+extra:
+  social:
+    # 社交图标, 显示在页脚右侧
+    - icon: fontawesome/brands/github
+      link: ''
+      name: GitHub
+    - icon: fontawesome/brands/gitlab
+      link: ''
+      name: GitLab
+    - icon: fontawesome/brands/x-twitter
+      link: ''
+      name: Twitter
+    - icon: fontawesome/brands/docker
+      link: ''
+      name: Docker
+    - icon: fontawesome/brands/linkedin
+      link: ''
+      name: LinkDin
+
+  # 默认显示站点的生成方式
+  generator: false
+
+copyright: Copyright &copy; 2023 Martin Donath
+
+extra_css:
+    - assets/css/main.css
+
+extra_javascript:
+    - assets/js/main.js
